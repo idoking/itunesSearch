@@ -1,0 +1,18 @@
+<search-box></search-box>
+<pagination></pagination>
+<div ng-if="checkDataLength(currentData)">
+    <div class="panel-body">
+      <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="data in currentData">
+        <div class="well well-sm media">
+            <a class="thumbnail pull-left" target="_block" href="{{data.trackViewUrl}}">
+                <img alt="{{data.trackName}}" src="{{data.artworkUrl100}}" width="120" height="90">
+            </a>
+            <div class="media-body">
+                <a target="_block" href="{{data.trackViewUrl}}">{{data.trackName}}</a>
+                <div>Type: {{data.kind}}</div>
+                <p>By <a target="_block" href={{data.artistViewUrl}}"><span class="label label-info">{{data.artistName}}</span></a></p>
+            </div>
+        </div>
+       </div>
+    </div>
+</div>

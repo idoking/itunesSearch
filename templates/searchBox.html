@@ -1,0 +1,11 @@
+<div class="well"> 
+	 <form class="form">
+	  	<input type="search" ng-model="itunesSearchText"  name="hyv-search" id="hyv-search" placeholder="Search..." class="ui-autocomplete-input form-control input-lg" autocomplete="off" required>
+		 <input input type="number" ng-model="limitResult" ng-init=" limitResult = 50" name="result_limit" id="hyv-result_limit" placeholder="Numer of Results..." class="ui-autocomplete-input form-control input-lg" required >
+		 <select ng-model="selectedType" ng-init="selectedType = types[9]" ng-options="x for x in types" class="ui-autocomplete-input form-control input-lg" required >
+		 </select>
+		 <br/>
+		 <br/>
+		 <button ng-click="getItunesData(itunesSearchText, limitResult, selectedType)" class="btn btn-default" >Submit</button>
+	</form>
+</div>

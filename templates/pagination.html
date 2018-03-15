@@ -1,0 +1,10 @@
+<div style="text-align:center;" ng-if="checkDataLength(currentData)">
+    <input type="hidden" id="pageToken" value="">
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" ng-show="currentPage>0" id="pageTokenPrev" ng-click="callNextPage(false)"
+                class="btn btn-default">Prev
+        </button>
+        <button type="button" ng-show="hasNext()" id="pageTokenNext" ng-click="callNextPage(true)" class="btn btn-default">Next
+        </button>
+    </div>
+</div>
